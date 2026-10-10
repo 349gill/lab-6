@@ -1,1 +1,4 @@
 Answer written questions here:
+1. The doubling scheme starts from a low number in order to keep the program running smoothly while the user zooms or resizes the screen. The user may see a sharper detailed graph when he zooms in. It makes sense to start from a small number so that the program doesnt hang for too long while the user is waiting for it to start.
+2. We could delegate a thread to manage the overall program including the rendering and interactions with the user and have many threads working together to calculate the mandlebrot() or the mandlebrotSmooth() function for each complex number independently.
+3. The view would be smoother if we sample the colour of 4 subpixels per pixel. The graph would look more mathematically accurate, however, this would decrease the performance by atleast 4 times due to so many function calls to mandlebrot().
